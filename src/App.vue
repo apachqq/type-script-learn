@@ -1,6 +1,6 @@
 <template>
     <header class="navbar">
-        <h3>Vue + TypeScript</h3>
+        <h3 @click="this.$router.push('/')">Vue + TypeScript</h3>
         <ul class="navbar-menu">
             <li>
                 <router-link to="/">Главная</router-link>
