@@ -8,25 +8,13 @@
 
 <script lang="ts">
     import {defineComponent} from 'vue'
-    import {useRouter} from 'vue-router'
+    import {useNavigate} from '@/hooks/navigate'
 
     export default defineComponent({
         setup() {
-            const router = useRouter()
-
-            const navigate = (): void => {
-                router.push('/users')
-            }
-
             return {
-                title: 'Как Vue работает с TypeScript?',
-                navigate
+                ...useNavigate()
             }
         }
-        // data() {
-        //     return {
-        //         title: 'Как Vue работает с TypeScript?'
-        //     }
-        // }
     })
 </script>

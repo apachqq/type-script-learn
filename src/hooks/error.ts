@@ -1,4 +1,4 @@
-import {onErrorCaptured, ref} from "vue";
+import {onErrorCaptured, ref} from 'vue'
 
 export function useError() {
     const error = ref<null | unknown>(null)
