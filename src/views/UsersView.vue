@@ -18,17 +18,13 @@
 <script lang="ts">
     import {defineComponent, onErrorCaptured, ref} from 'vue'
     import UserList from '@/components/UserList.vue'
+    import {useError} from '@/hooks/error'
 
     export default defineComponent({
         setup() {
-            const error = ref<null | unknown>(null)
-
-            onErrorCaptured(e => {
-                error.value = e
-                return true
-            })
-
-            return {error}
+            return {
+                ...useError()
+            }
         },
         components: {UserList}
     })
