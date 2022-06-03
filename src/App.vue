@@ -9,7 +9,7 @@
                 <router-link to="/users">Пользователи</router-link>
             </li>
             <li>
-                <router-link to="/login">FFFFFF</router-link>
+                <router-link to="/login">{{ this.$store.state.isAuth ? 'Выйти' : 'Войти' }}</router-link>
             </li>
         </ul>
     </header>
