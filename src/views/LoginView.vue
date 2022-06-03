@@ -4,11 +4,11 @@
             <h1>Авторизуйтесь</h1>
             <div>
                 <label for="email">Введите почту</label>
-                <input type="email" id="email" v-model.trim="form.email">
+                <input type="email" id="email" v-model="form.email">
             </div>
             <div class="margin">
                 <label for="password">Введите пароль</label>
-                <input type="password" id="password" v-model.trim="form.password">
+                <input type="password" id="password" v-model="form.password">
             </div>
             <button class="btn margin" :disabled="!isValid">Войти</button>
         </form>

@@ -13,6 +13,8 @@ export function useLogin() {
 
     const submit = () => {
         if (isValid) {
+            form.email.trim()
+            form.password.trim()
             store.commit('login')
             router.push('/')
         }
