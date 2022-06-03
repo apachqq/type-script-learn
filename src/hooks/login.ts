@@ -2,7 +2,7 @@ import {reactive, computed} from 'vue'
 import {useStore} from 'vuex'
 import {useRouter} from 'vue-router'
 
-export function useForm() {
+export function useLogin() {
     const form = reactive({
         email: '',
         password: ''

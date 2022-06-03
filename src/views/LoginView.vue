@@ -17,12 +17,12 @@
 
 <script lang="ts">
     import {defineComponent} from 'vue'
-    import {useForm} from '@/hooks/form'
+    import {useLogin} from '@/hooks/login'
 
     export default defineComponent({
         setup() {
             return {
-                ...useForm()
+                ...useLogin()
             }
         }
     })
