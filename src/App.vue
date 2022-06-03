@@ -11,7 +11,7 @@
             <li>
                 <router-link
                         to="/login"
-                        @click="this.$store.commit('logout')"
+                        @click="logout"
                 >
                     {{ this.$store.state.isAuth ? this.$store.state.logoutTitle : this.$store.state.loginTitle }}
                 </router-link>
@@ -22,3 +22,16 @@
         <router-view></router-view>
     </main>
 </template>
+
+<script lang="ts">
+    import {defineComponent} from 'vue'
+    import {useLogout} from '@/hooks/logout'
+
+    export default defineComponent({
+        setup() {
+            return {
+                ...useLogout()
+            }
+        }
+    })
+</script>
