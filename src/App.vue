@@ -9,7 +9,12 @@
                 <router-link to="/users">Пользователи</router-link>
             </li>
             <li>
-                <router-link to="/login">{{ this.$store.state.isAuth ? 'Выйти' : 'Войти' }}</router-link>
+                <router-link
+                        to="/login"
+                        @click="this.$store.commit('logout')"
+                >
+                    {{ this.$store.state.isAuth ? this.$store.state.logoutTitle : this.$store.state.loginTitle }}
+                </router-link>
             </li>
         </ul>
     </header>
@@ -22,10 +27,6 @@
     import {defineComponent} from 'vue'
 
     export default defineComponent({
-        methods: {
-            workWithStore() {
-                this.$store.state
-            }
-        }
+
     })
 </script>
