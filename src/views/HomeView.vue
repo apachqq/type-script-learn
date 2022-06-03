@@ -1,7 +1,6 @@
 <template>
     <div class="card">
         <h1>{{ title }}</h1>
-
         <button class="btn" @click="navigate">Открыть пользователей</button>
     </div>
 </template>
