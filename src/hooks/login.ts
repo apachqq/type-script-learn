@@ -21,7 +21,7 @@ export function useLogin() {
     }
 
     const isValid = computed(() => {
-        return form.email && form.password
+        return form.email.trim() !== '' && form.password.trim() !== ''
     })
 
     return {form, submit, isValid}
