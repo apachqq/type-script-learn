@@ -4,11 +4,11 @@
             <h1>Авторизуйтесь</h1>
             <div>
                 <label for="email">Введите почту</label>
-                <input type="email" id="email" v-model="email">
+                <input type="email" id="email" v-model.trim="email">
             </div>
             <div class="margin">
                 <label for="password">Введите пароль</label>
-                <input type="password" id="password" v-model="password">
+                <input type="password" id="password" v-model.trim="password">
             </div>
             <button class="btn margin">Войти</button>
         </form>
@@ -17,25 +17,12 @@
 
 <script lang="ts">
     import {defineComponent} from 'vue'
+    import {useForm} from '@/hooks/form'
 
     export default defineComponent({
-        data() {
+        setup() {
             return {
-                email: '',
-                password: ''
-            }
-        },
-        computed: {
-            isValid() {
-                return this.email !== '' && this.password !== ''
-            }
-        },
-        methods: {
-            submit() {
-                if (this.isValid) {
-                    this.$store.commit('login')
-                    this.$router.push('/')
-                }
+                ...useForm()
             }
         }
     })
