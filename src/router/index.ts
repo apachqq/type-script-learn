@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import PageNotFound from '@/views/PageNotFound.vue'
+import PageNotFoundView from '@/views/PageNotFoundView.vue'
+import LoginView from '@/views/LoginView.vue'
 
 const routes: RouteRecordRaw[] = [
     {
@@ -15,8 +16,13 @@ const routes: RouteRecordRaw[] = [
     },
     {
         path: '/:notFound(.*)',
-        name: 'PageNotFound',
-        component: PageNotFound
+        name: 'PageNotFoundView',
+        component: PageNotFoundView
+    },
+    {
+        path: '/login',
+        name: 'LoginView',
+        component: LoginView
     }
 ]
 

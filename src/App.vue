@@ -8,6 +8,9 @@
             <li>
                 <router-link to="/users">Пользователи</router-link>
             </li>
+            <li>
+                <router-link to="/login">FFFFFF</router-link>
+            </li>
         </ul>
     </header>
     <main class="container with-nav">
